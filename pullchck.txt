@@ -1,2 +1,128 @@
-pulling checking pull checking 
-child changing code
+
+admin@ManjuKam-pc MINGW64 ~
+$ git config --global user.name "manjusam"
+
+admin@ManjuKam-pc MINGW64 ~
+$ git config --global user.email "manjusam403@gmail.com"
+
+admin@ManjuKam-pc MINGW64 ~
+$ cd desktop
+
+admin@ManjuKam-pc MINGW64 ~/desktop
+$ ls
+desktop.ini
+
+admin@ManjuKam-pc MINGW64 ~/desktop
+$ git clone "https://github.com/manjusam/Handler.git"
+Cloning into 'Handler'...
+remote: Counting objects: 81, done.
+remote: Compressing objects: 100% (51/51), done.
+remote: Total 81 (delta 5), reused 73 (delta 2), pack-reused 0
+Unpacking objects: 100% (81/81), done.
+Checking connectivity... done.
+
+admin@ManjuKam-pc MINGW64 ~/desktop
+$ cd Handler
+
+admin@ManjuKam-pc MINGW64 ~/desktop/Handler (master)
+$ ls
+CheckFolder/  HandlerSimple/  pullchck.txt
+
+admin@ManjuKam-pc MINGW64 ~/desktop/Handler (master)
+$ vim pullchck.txt
+
+admin@ManjuKam-pc MINGW64 ~/desktop/Handler (master)
+$ git add pullchck.txt
+
+admin@ManjuKam-pc MINGW64 ~/desktop/Handler (master)
+$ git commit -m "pullcheck changed 26 4 2016"
+[master 4cb1932] pullcheck changed 26 4 2016
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+admin@ManjuKam-pc MINGW64 ~/desktop/Handler (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+admin@ManjuKam-pc MINGW64 ~/desktop/Handler (master)
+$ git --no-pager log
+commit 4cb19320e31c643455ae7b9aa4674af52fdb8912
+Author: manjusam <manjusam403@gmail.com>
+Date:   Tue Apr 26 09:13:50 2016 +1000
+
+    pullcheck changed 26 4 2016
+
+commit 45af2fbe4a715010642c1a2491d4e0f03c2f7361
+Merge: 4a3d2c2 ef357bc
+Author: manjusam <manjusam403@gmail.com>
+Date:   Fri Apr 22 17:15:16 2016 +1000
+
+    Merge pull request #1 from manjusam/child-handler
+
+    Update pullchck.txt
+
+commit ef357bc721ccea212e35eeff007c42ddca2deedd
+Author: manjusam <manjusam403@gmail.com>
+Date:   Fri Apr 22 17:09:54 2016 +1000
+
+    Update pullchck.txt
+
+commit 4a3d2c22b4aa2f4a163833d63673e6bce71d7db5
+Author: manjusam <manjusam403@gmail.com>
+Date:   Fri Apr 22 16:56:24 2016 +1000
+
+    Create pullchck.txt
+
+commit 7885bc815286e1394f0740b893ebcdbc1e6de0bd
+Author: manjusam <manjusam403@gmail.com>
+Date:   Fri Apr 22 16:53:23 2016 +1000
+
+    check
+
+    checkfolder
+
+commit 07a91ab260cda7f83ef36bea9b46ccd8ccb3ba0d
+Author: manjusam <manjusam403@gmail.com>
+Date:   Fri Apr 22 16:44:25 2016 +1000
+
+    Thread concept
+
+    basic handler concept
+
+commit 79eb72b4c507b3c4e53085391e6f4137a0a46f61
+Author: manjusam <manjusam403@gmail.com>
+Date:   Fri Apr 22 16:40:33 2016 +1000
+
+    :tada: Added .gitattributes & .gitignore files
+
+admin@ManjuKam-pc MINGW64 ~/desktop/Handler (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 293 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/manjusam/Handler.git
+   45af2fb..4cb1932  master -> master
+Branch master set up to track remote branch master from origin.
+
+admin@ManjuKam-pc MINGW64 ~/desktop/Handler (master)
+$ git pull origin master
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/manjusam/Handler
+ * branch            master     -> FETCH_HEAD
+   4cb1932..65ee220  master     -> origin/master
+Updating 4cb1932..65ee220
+Fast-forward
+ CheckFolder/necheck.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 CheckFolder/necheck.txt
+
+admin@ManjuKam-pc MINGW64 ~/desktop/Handler (master)
+$
+
